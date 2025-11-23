@@ -1,7 +1,8 @@
 # aws-serverless-notes-api
 Serverless Notes API using AWS Lambda, API Gateway, and DynamoDB
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](file_00000000c4987209a2cc5de040323630.png)
+
 
 ## 🏃‍♂️ How to Run the Project
 
