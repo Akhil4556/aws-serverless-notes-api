@@ -12,8 +12,6 @@ cd aws-serverless-notes-api
 
 ---
 
-### 🔹 After this line:
-
 ```
 ✅ 2. Install Dependencies
 
