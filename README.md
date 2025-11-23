@@ -1,6 +1,8 @@
 # aws-serverless-notes-api
 Serverless Notes API using AWS Lambda, API Gateway, and DynamoDB
 
+![Architecture Diagram](architecture.png)
+
 ## 🏃‍♂️ How to Run the Project
 
 ### ✅ 1. Clone the Repository
