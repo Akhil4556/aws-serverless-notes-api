@@ -5,12 +5,22 @@ Serverless Notes API using AWS Lambda, API Gateway, and DynamoDB
 
 ### ✅ 1. Clone the Repository
 
+````markdown
 ```bash
 git clone https://github.com/Akhil4556/aws-serverless-notes-api.git
 cd aws-serverless-notes-api
 
+---
+
+### 🔹 After this line:
+
+```
 ✅ 2. Install Dependencies
- npm install
+
+```bash
+npm install
+```
+
 ✅ 3. Deploy to AWS
 Make sure you have:
 
@@ -20,12 +30,18 @@ Serverless Framework installed
 
 
 Then run:
+
+```bash
 serverless deploy
+```
+
 ✅ 4. Get the API URL
 
 After deployment, Serverless will output something like:
 
+```text
 https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/Wpdb/notes
+```
 
 This is your API base URL ✅
 
@@ -33,6 +49,7 @@ This is your API base URL ✅
 
 Example:
 
+```bash
 curl https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/Wpdb/notes
-
+```
 
