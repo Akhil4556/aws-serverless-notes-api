@@ -1,0 +1,49 @@
+service: serverless-dyn-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ${env:AWS_REGION, "ap-south-1"}
+  stage: dev
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - dynamodb:PutItem
+        - dynamodb:GetItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:Scan
+        - dynamodb:Query
+      Resource:
+        - "arn:aws:dynamodb:${self:provider.region}:*:table/${self:service}-${self:provider.stage}-items"
+
+functions:
+  items:
+    handler: handler.main
+    events:
+      - http:
+          path: items
+          method: get
+      - http:
+          path: items
+          method: post
+      - http:
+          path: items/{id}
+          method: get
+      - http:
+          path: items/{id}
+          method: delete
+
+resources:
+  Resources:
+    ItemsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:service}-${self:provider.stage}-items
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
