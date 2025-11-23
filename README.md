@@ -7,11 +7,9 @@ Serverless Notes API using AWS Lambda, API Gateway, and DynamoDB
 
 ````markdown
 ```bash
-git clone https://github.com/Akhil4556/aws-serverless-notes-api.git
+git clone
+https://github.com/Akhil4556/aws-serverless-notes-api.git
 cd aws-serverless-notes-api
-
----
-
 ```
 ✅ 2. Install Dependencies
 
